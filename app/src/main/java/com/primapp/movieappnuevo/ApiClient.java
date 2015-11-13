@@ -24,6 +24,7 @@ public class ApiClient {
     String sesionId = "47767573t";
     String urlBase = "https://api.themoviedb.org/3/";
     String mode = "";
+    iMovieService servicio;
 
     public ApiClient() {
         super();
@@ -38,13 +39,40 @@ public class ApiClient {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        iMovieService servicio = retrofit.create(iMovieService.class);
+        servicio = retrofit.create(iMovieService.class);
     }
 
+    public void refreshPopulars(final ListAdapter myAdapter)
+    {
+        Call<ApiData> call = servicio.getPopularMovies(apiKey); //Fem un call en segon pla
+        call.enqueue(new Callback<ApiData>() {
+            public void onResponse(Response<ApiData> response, Retrofit retrofit) {
+                ApiData resultado = response.body();
+                myAdapter.addAll(resultado.getResults());
+            }
+
+            public void onFailure(Throwable t) {
+            }
+        });
+    }
+
+    public void refreshTopRated(final ListAdapter myAdapter)
+    {
+        Call<ApiData> call = servicio.getRatedMovies(apiKey); //Fem un call en segon pla
+        call.enqueue(new Callback<ApiData>()
+        {
+            public void onResponse(Response<ApiData> response, Retrofit retrofit)
+            {
+                ApiData resultado = response.body();
+                myAdapter.addAll(resultado.getResults());
+
+            }
+            public void onFailure(Throwable t) {}});
+    }
 
     interface iMovieService {
         @GET("movie/popular")
-        Call<ApiData> getFavoriteMovies(
+        Call<ApiData> getPopularMovies(
                 @Query("apikey") String apiKey
         );
 
