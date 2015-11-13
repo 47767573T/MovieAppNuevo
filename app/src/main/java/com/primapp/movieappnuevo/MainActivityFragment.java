@@ -1,5 +1,6 @@
 package com.primapp.movieappnuevo;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.util.Log;
@@ -7,7 +8,9 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.GridView;
 import android.widget.ListView;
 
 import java.io.IOException;
@@ -32,6 +35,7 @@ public class MainActivityFragment extends Fragment {
     private ArrayList<Result> items;
     private ListAdapter adapter;
     private ListView lvPelis;
+    private GridView gvPelis;
     String apiKey = "e6f2c549601727fca2e90f4291bbe34d";
     String sesionId = "47767573t";
     String urlBase = "https://api.themoviedb.org/3/movie/";
@@ -50,9 +54,20 @@ public class MainActivityFragment extends Fragment {
         createRetrofit();
         refreshPopulars();
         lvPelis = (ListView)rootView.findViewById(R.id.lvPelis);
+        gvPelis = (GridView) rootView.findViewById(R.id.GVgridView);
         items = new ArrayList<>();
         adapter = new ListAdapter(getContext(), 0, items);
-        lvPelis.setAdapter(adapter);
+        gvPelis.setAdapter(adapter);
+
+        gvPelis.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Result peliPicada = (Result) parent.getItemAtPosition(position);
+                Intent details = new Intent(getContext(), DetailsActivity.class);
+                details.putExtra("pelicula", peliPicada);
+                startActivity(details);
+            }
+        });
 
         return rootView;
     }

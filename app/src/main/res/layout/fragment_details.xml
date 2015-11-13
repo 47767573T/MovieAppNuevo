@@ -7,4 +7,52 @@
     tools:context="com.primapp.movieappnuevo.DetailsActivityFragment">
 
 
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="170dp"
+        android:id="@+id/IVposter"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/TVtitulo"
+        android:layout_alignTop="@+id/IVposter"
+        android:layout_toRightOf="@+id/IVposter"
+        android:layout_toEndOf="@+id/IVposter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/TVpopularidad"
+        android:layout_below="@+id/TVtitulo"
+        android:layout_toRightOf="@+id/IVposter"
+        android:layout_toEndOf="@+id/IVposter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/TVestreno"
+        android:layout_below="@+id/TVpopularidad"
+        android:layout_toRightOf="@+id/IVposter"
+        android:layout_toEndOf="@+id/IVposter" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/TVdesc"
+        android:layout_below="@+id/IVposter"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
