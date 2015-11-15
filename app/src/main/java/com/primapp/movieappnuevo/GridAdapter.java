@@ -24,7 +24,7 @@ public class GridAdapter extends ArrayAdapter<Result>
 {
         final private String POSTER_BASE_URL = "http://image.tmdb.org/t/p/";
         final private String POSTER_SIZE = "w185";
-        DecimalFormat oneDecimal = new DecimalFormat("#.#");
+
 
 
         public GridAdapter(Context context, int resource, List<Result> objects)
@@ -33,16 +33,16 @@ public class GridAdapter extends ArrayAdapter<Result>
         }
 
         @Override
-        public View getView(int position, View myView, ViewGroup parent)
+        public View getView(int position, View posterView, ViewGroup parent)
         {
             Result selectedFilm = getItem(position);
-            if (myView == null)
+            if (posterView == null)
             {
                 LayoutInflater inflater = LayoutInflater.from(getContext());
-                myView = inflater.inflate(R.layout.gv_peliculas, parent, false);
+                posterView = inflater.inflate(R.layout.gv_peliculas, parent, false);
             }
-            ImageView poster = (ImageView) myView.findViewById(R.id.IVposter);
+            ImageView poster = (ImageView) posterView.findViewById(R.id.IVposter);
             Picasso.with(getContext()).load(POSTER_BASE_URL+POSTER_SIZE+selectedFilm.getPosterPath()).fit().into(poster);
-            return myView;
+            return posterView;
         }
 }

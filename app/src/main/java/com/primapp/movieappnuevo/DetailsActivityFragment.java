@@ -10,12 +10,15 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
+
 /**
  * A placeholder fragment containing a simple view.
  */
 public class DetailsActivityFragment extends Fragment {
     final private String POSTER_BASE_URL = "http://image.tmdb.org/t/p/";
     final private String POSTER_SIZE = "w185";
+    DecimalFormat df = new DecimalFormat("#.00");
     public DetailsActivityFragment() {
     }
 
@@ -24,19 +27,20 @@ public class DetailsActivityFragment extends Fragment {
     {
         View x =  inflater.inflate(R.layout.fragment_details, container, false);
 
-        Result peliPicada = (Result) getActivity().getIntent().getExtras().get("pelicula");
+        Result peliClickada = (Result) getActivity().getIntent().getExtras().get("pelicula");
 
         TextView titulo = (TextView) x.findViewById(R.id.TVtitulo);
         TextView popularidad = (TextView) x.findViewById(R.id.TVpopularidad);
-        TextView release = (TextView) x.findViewById(R.id.TVestreno);
-        TextView desc = (TextView) x.findViewById(R.id.TVdesc);
+        TextView estreno = (TextView) x.findViewById(R.id.TVestreno);
+        TextView sinopsis = (TextView) x.findViewById(R.id.TVsinopsis);
         ImageView poster = (ImageView) x.findViewById(R.id.IVposter);
 
-        titulo.setText(peliPicada.getTitle());
-        popularidad.setText("Rating: "+String.valueOf(peliPicada.getPopularity()));
-        release.setText("Release: "+peliPicada.getReleaseDate());
-        desc.setText(peliPicada.getOverview());
-        Picasso.with(getContext()).load(POSTER_BASE_URL+POSTER_SIZE+peliPicada.getPosterPath()).fit().into(poster);
+        titulo.setText(peliClickada.getTitle());
+
+        popularidad.setText("Clasificacion: "+df.format(peliClickada.getPopularity()));
+        estreno.setText("Lanzamiento: "+peliClickada.getReleaseDate());
+        sinopsis.setText("Sinopsis: "+peliClickada.getOverview());
+        Picasso.with(getContext()).load(POSTER_BASE_URL+POSTER_SIZE+peliClickada.getPosterPath()).fit().into(poster);
         return x;
     }
 }
