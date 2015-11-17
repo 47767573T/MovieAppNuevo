@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "name": "original_title",
+      "type": "String"
+    },
+    {
+      "name": "overview",
+      "type": "String"
+    },
+    {
+      "name": "release_date",
+      "type": "String"
+    },
+    {
+      "name": "posterPath",
+      "type": "String"
+    },
+    {
+      "name": "popularity",
+      "type": "Double"
+    },
+    {
+      "name": "voteAverage",
+      "type": "Double"
+    },
+    {
+      "name": "voteCount",
+      "type": "Integer"
+    }
+  ]
+
+
+}

@@ -1,4 +1,4 @@
-package com.primapp.movieappnuevo;
+package Adapters;
 
 /**
  * Created by 47767573t on 13/11/15.
@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 //import com.squareup.picasso.Picasso;
 
+import com.primapp.movieappnuevo.R;
 import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;

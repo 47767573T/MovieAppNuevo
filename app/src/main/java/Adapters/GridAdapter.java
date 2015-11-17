@@ -1,4 +1,4 @@
-package com.primapp.movieappnuevo;
+package Adapters;
 
 /**
  * Created by 47767573t on 13/11/15.
@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 
+import com.primapp.movieappnuevo.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;

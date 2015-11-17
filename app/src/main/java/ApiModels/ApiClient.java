@@ -3,7 +3,7 @@ package ApiModels;
 import android.widget.ArrayAdapter;
 
 
-import com.primapp.movieappnuevo.ListAdapter;
+import Adapters.ListAdapter;
 
 import retrofit.Call;
 import retrofit.Callback;
