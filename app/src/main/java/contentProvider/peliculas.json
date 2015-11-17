@@ -1,7 +1,7 @@
 {
   "movies": [
     {
-      "name": "original_title",
+      "name": "originalTitle",
       "type": "String"
     },
     {
@@ -9,7 +9,7 @@
       "type": "String"
     },
     {
-      "name": "release_date",
+      "name": "releaseDate",
       "type": "String"
     },
     {
@@ -29,6 +29,4 @@
       "type": "Integer"
     }
   ]
-
-
 }
