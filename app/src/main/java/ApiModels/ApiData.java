@@ -1,4 +1,4 @@
-package com.primapp.movieappnuevo;
+package ApiModels;
 
         import java.util.ArrayList;
         import java.util.List;

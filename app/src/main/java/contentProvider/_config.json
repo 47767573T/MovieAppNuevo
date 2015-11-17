@@ -1,0 +1,13 @@
+{
+  "syntaxVersion": 3,
+  "projectPackageId": "com.primapp.movieappnuevo",
+  "authority": "com.primapp.movieappnuevo.provider",
+  "providerJavaPackage": "com.primapp.movieappnuevo.provider",
+  "providerClassName": "NotesProvider",
+  "sqliteOpenHelperClassName": "NotesSQLiteOpenHelper",
+  "sqliteOpenHelperCallbacksClassName": "NotesSQLiteOpenHelperCallbacks",
+  "databaseFileName": "notes.db",
+  "databaseVersion": 1,
+  "enableForeignKeys": true,
+  "useAnnotations": true
+}

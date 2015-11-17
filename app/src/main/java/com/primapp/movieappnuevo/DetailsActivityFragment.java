@@ -12,6 +12,8 @@ import com.squareup.picasso.Picasso;
 
 import java.text.DecimalFormat;
 
+import ApiModels.Result;
+
 /**
  * A placeholder fragment containing a simple view.
  */

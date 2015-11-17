@@ -19,6 +19,8 @@ import com.squareup.picasso.Picasso;
 import java.text.DecimalFormat;
 import java.util.List;
 
+import ApiModels.Result;
+
 
 public class ListAdapter extends ArrayAdapter<Result>
 {
