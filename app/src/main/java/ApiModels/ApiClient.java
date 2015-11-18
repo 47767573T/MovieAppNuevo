@@ -1,12 +1,9 @@
-package com.primapp.movieappnuevo;
+package ApiModels;
 
-import android.util.Log;
 import android.widget.ArrayAdapter;
 
 
-import com.google.gson.JsonElement;
-
-import java.util.Arrays;
+import Adapters.ListAdapter;
 
 import retrofit.Call;
 import retrofit.Callback;

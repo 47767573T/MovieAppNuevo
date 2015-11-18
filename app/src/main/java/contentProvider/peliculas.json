@@ -1,0 +1,32 @@
+{
+  "fields": [
+    {
+      "name": "originalTitle",
+      "type": "String"
+    },
+    {
+      "name": "overview",
+      "type": "String"
+    },
+    {
+      "name": "releaseDate",
+      "type": "String"
+    },
+    {
+      "name": "posterPath",
+      "type": "String"
+    },
+    {
+      "name": "popularity",
+      "type": "Double"
+    },
+    {
+      "name": "voteAverage",
+      "type": "Double"
+    },
+    {
+      "name": "voteCount",
+      "type": "Integer"
+    }
+  ]
+}
