@@ -37,9 +37,7 @@ public class MainActivityFragment extends Fragment {
     private ListView lvPelis;
     private GridView gvPelis;
     String apiKey = "e6f2c549601727fca2e90f4291bbe34d";
-    String sesionId = "47767573t";
     String urlBase = "https://api.themoviedb.org/3/movie/";
-    String mode = "";
     iMovieService servicio;
    //FULL LINK https://api.themoviedb.org/3/movie/popular?
 
