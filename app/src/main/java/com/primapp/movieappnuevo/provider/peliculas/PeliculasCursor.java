@@ -1,9 +1,6 @@
 package com.primapp.movieappnuevo.provider.peliculas;
 
-import java.util.Date;
-
 import android.database.Cursor;
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.primapp.movieappnuevo.provider.base.AbstractCursor;

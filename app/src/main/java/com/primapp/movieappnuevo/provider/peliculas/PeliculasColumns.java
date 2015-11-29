@@ -3,7 +3,7 @@ package com.primapp.movieappnuevo.provider.peliculas;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-import Provider.NotesProvider;
+import com.primapp.movieappnuevo.provider.NotesProvider;
 
 /**
  * Columns for the {@code peliculas} table.

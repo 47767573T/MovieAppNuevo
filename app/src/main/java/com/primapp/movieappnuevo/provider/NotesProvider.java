@@ -1,6 +1,4 @@
-package Provider;
-
-import java.util.Arrays;
+package com.primapp.movieappnuevo.provider;
 
 import android.content.ContentValues;
 import android.content.UriMatcher;
@@ -12,6 +10,8 @@ import android.util.Log;
 import com.primapp.movieappnuevo.BuildConfig;
 import com.primapp.movieappnuevo.provider.base.BaseContentProvider;
 import com.primapp.movieappnuevo.provider.peliculas.PeliculasColumns;
+
+import java.util.Arrays;
 
 public class NotesProvider extends BaseContentProvider {
     private static final String TAG = NotesProvider.class.getSimpleName();

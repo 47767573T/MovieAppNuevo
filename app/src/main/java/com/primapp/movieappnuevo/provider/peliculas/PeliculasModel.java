@@ -1,11 +1,8 @@
 package com.primapp.movieappnuevo.provider.peliculas;
 
-import com.primapp.movieappnuevo.provider.base.BaseModel;
-
-import java.util.Date;
-
-import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+
+import com.primapp.movieappnuevo.provider.base.BaseModel;
 
 /**
  * Data model for the {@code peliculas} table.

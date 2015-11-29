@@ -33,7 +33,7 @@
         </activity>
 
         <provider
-            android:name="Provider.NotesProvider"
+            android:name="provider.NotesProvider"
             android:authorities="com.primapp.movieappnuevo.provider"
             android:exported="false" />
     </application>

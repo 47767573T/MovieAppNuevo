@@ -1,4 +1,4 @@
-package Provider;
+package com.primapp.movieappnuevo.provider;
 
 import android.annotation.TargetApi;
 import android.content.Context;
