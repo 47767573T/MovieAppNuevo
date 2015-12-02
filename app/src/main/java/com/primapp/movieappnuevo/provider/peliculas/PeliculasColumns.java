@@ -3,14 +3,15 @@ package com.primapp.movieappnuevo.provider.peliculas;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-import com.primapp.movieappnuevo.provider.NotesProvider;
+import com.primapp.movieappnuevo.provider.MoviesProvider;
+import com.primapp.movieappnuevo.provider.peliculas.PeliculasColumns;
 
 /**
  * Columns for the {@code peliculas} table.
  */
 public class PeliculasColumns implements BaseColumns {
     public static final String TABLE_NAME = "peliculas";
-    public static final Uri CONTENT_URI = Uri.parse(NotesProvider.CONTENT_URI_BASE + "/" + TABLE_NAME);
+    public static final Uri CONTENT_URI = Uri.parse(MoviesProvider.CONTENT_URI_BASE + "/" + TABLE_NAME);
 
     /**
      * Primary key.

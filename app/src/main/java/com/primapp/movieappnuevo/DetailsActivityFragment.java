@@ -35,7 +35,7 @@ public class DetailsActivityFragment extends Fragment {
         TextView popularidad = (TextView) x.findViewById(R.id.TVpopularidad);
         TextView estreno = (TextView) x.findViewById(R.id.TVestreno);
         TextView sinopsis = (TextView) x.findViewById(R.id.TVsinopsis);
-        ImageView poster = (ImageView) x.findViewById(R.id.IVposter);
+        ImageView poster = (ImageView) x.findViewById(R.id.ivListPoster);
 
         titulo.setText(peliClickada.getTitle());
 

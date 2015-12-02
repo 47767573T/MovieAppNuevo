@@ -4,8 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -33,9 +31,14 @@
         </activity>
 
         <provider
-            android:name="provider.NotesProvider"
+            android:name=".provider.MoviesProvider"
             android:authorities="com.primapp.movieappnuevo.provider"
             android:exported="false" />
+
+        <activity
+            android:name=".Settings.SettingsActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
     </application>
 
 </manifest>

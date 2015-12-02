@@ -1,7 +1,9 @@
 package com.primapp.movieappnuevo.provider.peliculas;
 
-import android.content.ContentResolver;
+import java.util.Date;
+
 import android.content.Context;
+import android.content.ContentResolver;
 import android.database.Cursor;
 import android.net.Uri;
 

@@ -1,8 +1,11 @@
 package com.primapp.movieappnuevo.provider.peliculas;
 
-import android.content.ContentResolver;
+import java.util.Date;
+
 import android.content.Context;
+import android.content.ContentResolver;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 
 import com.primapp.movieappnuevo.provider.base.AbstractContentValues;
